@@ -5,10 +5,10 @@ block content
     h1= title 
 
   main 
-    h2 Write your message
+    p.msg-header Write your message
     form.form(action="/new", method="POST")
-      textarea(name="message", cols="30", rows="10") 
-      input(type="text", name="name", placeholder="Name")
-      button(type="submit") Post
+      input.name-input(type="text", name="name", placeholder="Name")
+      textarea.text-input(name="message", cols="20", rows="10", placeholder="Whats on your mind?")
+      button.submit-btn(type="submit") Post
 
     a#cancel(href="/") Cancel 
