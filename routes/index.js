@@ -25,7 +25,7 @@ router.get("/new", (req, res, next) => {
 });
 
 router.post("/new", (req, res) => {
-  messages.push({
+  messages.unshift({
     text: req.body.message,
     user: req.body.name,
     added: new Date(),
