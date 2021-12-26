@@ -4,11 +4,11 @@ block content
   header 
     h1= title
 
-  main 
+  main
     a#add(href="/new") Create Post 
     each message in messages 
-      div.message
-        h4= message.text
-        p= message.user 
-        p= message.added
+      div.card
+        h2.message-user= message.user
+        p.message-text= message.text 
+        p.message-added= message.added
     

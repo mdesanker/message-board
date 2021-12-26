@@ -1,6 +1,7 @@
 :root {
   --blue: #457b9d;
   --red: #e63946;
+  --lightgray: rgb(240, 242, 245);
   --gray: rgb(52, 52, 52);
 }
 
@@ -11,8 +12,12 @@
   outline: none;
 }
 
-html {
+body {
   font: 18px Helvetica, Arial, sans-serif;
+  background-color: var(--lightgray);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 header {
@@ -61,4 +66,31 @@ a {
 #cancel:hover {
   color: white;
   background-color: var(--red);
+}
+
+.card {
+  min-width: 80%;
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+
+.message-user {
+  font-size: 1rem;
+  width: 100%;
+  color: var(--gray);
+  padding-bottom: 5px;
+  border-bottom: thin solid lightgray;
+}
+
+.message-text {
+  padding: 10px 0;
+}
+
+.message-added {
+  font-size: 0.8rem;
+  color: gray;
 }
