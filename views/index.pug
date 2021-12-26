@@ -4,7 +4,8 @@ block content
   h1= title
   p Welcome to #{title}
   each message in messages 
-    h4= message.text
-    p= message.user 
-    p= message.added
+    div.message
+      h4= message.text
+      p= message.user 
+      p= message.added
   

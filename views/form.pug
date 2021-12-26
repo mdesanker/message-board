@@ -2,4 +2,7 @@ extends layout
 
 block content 
   h1= title 
-  p welcome to #{title}
+  form.form(action="/new", method="POST")
+    textarea(name="message", cols="30", rows="10") 
+    input(type="text", placeholder="Name")
+    button(type="submit") Post
