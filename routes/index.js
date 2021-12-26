@@ -21,7 +21,7 @@ router.get("/", function (req, res, next) {
 
 // Get form page
 router.get("/new", (req, res, next) => {
-  res.render("form", { title: "Add a message" });
+  res.render("form", { title: "Messageboard" });
 });
 
 router.post("/new", (req, res) => {
