@@ -1,10 +1,14 @@
 extends layout
 
 block content 
-  h1= title 
-  form.form(action="/new", method="POST")
-    textarea(name="message", cols="30", rows="10") 
-    input(type="text", name="name", placeholder="Name")
-    button(type="submit") Post
+  header 
+    h1= title 
 
-  a(href="/") Cancel 
+  main 
+    p.msg-header Write your message
+    form.form(action="/new", method="POST")
+      input.name-input(type="text", name="name", placeholder="Name")
+      textarea.text-input(name="message", cols="20", rows="10", placeholder="Whats on your mind?")
+      button.submit-btn(type="submit") Post
+
+    a#cancel(href="/") Cancel 

@@ -1,12 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/new") Create Post 
-  each message in messages 
-    div.message
-      h4= message.text
-      p= message.user 
-      p= message.added
-  
+  header 
+    h1= title
+
+  main
+    a#add(href="/new") Create Post 
+    each message in messages 
+      div.card
+        h2.message-user= message.user
+        p.message-text= message.text 
+        p.message-added= message.added
+    

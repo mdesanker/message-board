@@ -1,16 +1,26 @@
 const express = require("express");
 const router = express.Router();
 
+const dateOptions = {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "2-digit",
+};
+
 const messages = [
   {
     text: "Hi there!",
     user: "Armando",
-    added: new Date(),
+    added: "Sunday, December 26, 2021, 1:25:28 PM",
   },
   {
-    text: "Hello, world!",
+    text: "Merry Christmas 2021!",
     user: "Michael",
-    added: new Date(),
+    added: "Saturday, December 25, 2021, 9:05:15 AM",
   },
 ];
 
@@ -21,14 +31,14 @@ router.get("/", function (req, res, next) {
 
 // Get form page
 router.get("/new", (req, res, next) => {
-  res.render("form", { title: "Add a message" });
+  res.render("form", { title: "Messageboard" });
 });
 
 router.post("/new", (req, res) => {
   messages.unshift({
     text: req.body.message,
     user: req.body.name,
-    added: new Date(),
+    added: new Date().toLocaleDateString("en-US", dateOptions),
   });
   res.redirect("/");
 });
