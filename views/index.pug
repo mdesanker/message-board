@@ -5,7 +5,7 @@ block content
     h1= title
 
   main 
-    a(href="/new") Create Post 
+    a#add(href="/new") Create Post 
     each message in messages 
       div.message
         h4= message.text

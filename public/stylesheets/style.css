@@ -1,5 +1,6 @@
 :root {
   --blue: #457b9d;
+  --red: #e63946;
   --gray: rgb(52, 52, 52);
 }
 
@@ -31,19 +32,33 @@ main {
 
 a {
   display: block;
-  color: var(--blue);
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   padding: 0.5rem 3rem;
-  border: 2px solid var(--blue);
+  border: 2px solid black;
   border-radius: 5px;
   margin: 1rem 0;
-  transition: all 200ms;
+  transition: background-color 200ms;
 }
 
-a:hover {
+#add {
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+#add:hover {
   color: white;
   background-color: var(--blue);
+}
+
+#cancel {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+#cancel:hover {
+  color: white;
+  background-color: var(--red);
 }
